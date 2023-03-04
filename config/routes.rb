@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'users/show'
 
-  devise_for :users
+  devise_for :users, controllers: {
+    session:"users/sessions",
+    registrations: "users/registrations"
+  }
 
   get 'rooms/index'
 
@@ -13,7 +16,7 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
-  devise_scope :user do
-    get "users", to: "devise/sessions#new"
-  end
+  # devise_scope :user do
+  #   get "users", to: "devise/sessions#new"
+  # end
 end
