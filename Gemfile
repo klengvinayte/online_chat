@@ -6,6 +6,7 @@ ruby "3.1.2"
 gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
+gem "dotenv-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
 gem "puma", "~> 5.0"
