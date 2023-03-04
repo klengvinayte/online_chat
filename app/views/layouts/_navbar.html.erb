@@ -1,15 +1,14 @@
 <div class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <%= link_to "Chat!", root_path, class: 'navbar-brand' %>
+    <%= link_to "Chat!", root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse" data-toggle="collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-<!--          <li class="nav-item"><%#= link_to t('.user'), current_user, class: "nav-link" %></li>-->
-          <li class="nav-item"><%= button_to 'Sign Out', destroy_user_session_path, :method => :delete, class: "btn btn-sm btn-light nav-link" %></li>
+          <li class="nav-item"><%= button_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-sm btn-light nav-link" %></li>
           <li class="nav-item nav-link"><%= current_user.email %></li>
         <% else %>
-<!--          <li class="nav-item"><%#= link_to t('.sign_in'), new_user_session_path, class: "nav-link" %></li>-->
-          <li class="nav-item"><%= link_to 'Sign in', new_user_session_path, :method => :delete, class: "btn btn-sm btn-light nav-link" %></li>
+          <li class="nav-item"><%= link_to "Log in", new_user_session_path, :method => :delete, class: "btn btn-sm btn-light nav-link" %></li>
+          <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, :method => :delete, class: "btn btn-sm btn-light nav-link" %></li>
         <% end %>
       </ul>
     </div>
